@@ -4,6 +4,8 @@ import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+// import amirk from "amir-kavousian-round.png";
+// import julianm from "julian-mehnle-round.png";
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -11,24 +13,19 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 ---
 
-<Layout title="About">
+<Layout title="Team">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Team</Fragment>
+      <Fragment slot="desc"
+        >We are a small passionate team with prior experience in building
+        software teams and security companies. <br />
+        We are on a mission to transform how developers interact with application
+        security.</Fragment
+      >
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <div class="grid md:grid-cols-2 gap-20 mx-auto max-w-2xl mt-12">
       {
         publishedTeamMembers.map((teamMemberEntry) => (
           <div class="group">
@@ -52,6 +49,23 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
           </div>
         ))
       }
+    </div>
+
+    <div class="flex flex-col gap-2 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Why are we building DevArmor?
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        The idea for DevArmor was born out of our own frustration with the
+        existing Shift Left tools. Most Shift Left tools have low
+        signal-to-noise ratios and require specialized security knowledge to
+        configure and operate. As a result, AppSec engineers, not developers,
+        run Shift Left tools in most organizations. This leads to a bottleneck
+        in development and an unmet need for security in teams that don't have a
+        large AppSec team. We are on a mission to change that by building a
+        developer-first security tool that is easy to use and provides high
+        signal-to-noise ratio.
+      </p>
     </div>
   </Container>
 </Layout>
