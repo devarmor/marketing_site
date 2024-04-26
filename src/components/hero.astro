@@ -2,7 +2,7 @@
 import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <main
@@ -32,7 +32,7 @@ import { Icon } from "astro-icon";
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="mdi:email" />
+        <Icon name="mdi:email-open" />
         Get Early Access
       </Link>
       <Link
@@ -42,7 +42,7 @@ import { Icon } from "astro-icon";
         href="https://calendly.com/amir-devarmor/30min?month=2024-04"
         class="flex gap-1 items-center justify-center"
         target="_blank">
-        <Icon class="text-black w-5 h-5" name="mdi:comment-account-outline" />
+        <Icon name="mdi:comment-person" />
         Book a Demo
       </Link>
     </div>

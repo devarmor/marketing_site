@@ -2,7 +2,8 @@
 draft: false
 name: "Julian Mehnel"
 title: "Co-Founder & CTO"
-LinkedIn: "https://www.linkedin.com/in/julian-mehnle-a92a9844/"
+linkedin: "https://www.linkedin.com/in/julian-mehnle-a92a9844/"
+twitter: "https://twitter.com/jume0"
 avatar: {
     src: "/julian-mehnle-round.png",
     alt: "Julian Mehnel"

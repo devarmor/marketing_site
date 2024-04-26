@@ -2,7 +2,8 @@
 draft: false
 name: "Amir Kavousian"
 title: "Co-Founder & CEO"
-LinkedIn: "https://www.linkedin.com/in/amir-kavousian/"
+linkedin: "https://www.linkedin.com/in/amir-kavousian/"
+twitter: "https://twitter.com/kavousian"
 avatar: {
     src: "/amir-kavousian-round.png",
     alt: "Amir Kavousian"
