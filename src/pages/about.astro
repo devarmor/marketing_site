@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -45,6 +46,18 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
               <h3 class="text-sm text-slate-500">
                 {teamMemberEntry.data.title}
               </h3>
+            </div>
+            <div class="flex justify-center mt-2 gap-4">
+              <a
+                href={teamMemberEntry.data.linkedin}
+                class="text-blue-600 hover:text-blue-800">
+                <Icon class="w-5 h-5" name="mdi:linkedin" />
+              </a>
+              <a
+                href={teamMemberEntry.data.twitter}
+                class="text-black-500 hover:text-black-700">
+                <Icon class="w-5 h-5" name="fa6-brands:square-x-twitter" />
+              </a>
             </div>
           </div>
         ))
