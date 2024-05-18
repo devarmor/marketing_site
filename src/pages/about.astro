@@ -53,11 +53,14 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 class="text-blue-600 hover:text-blue-800">
                 <Icon class="w-5 h-5" name="mdi:linkedin" />
               </a>
-              <a
-                href={teamMemberEntry.data.twitter}
-                class="text-black-500 hover:text-black-700">
-                <Icon class="w-5 h-5" name="fa6-brands:square-x-twitter" />
-              </a>
+              {teamMemberEntry.data.twitter &&
+                teamMemberEntry.data.twitter.length > 0 && (
+                  <a
+                    href={teamMemberEntry.data.twitter}
+                    class="text-black-500 hover:text-black-700">
+                    <Icon class="w-5 h-5" name="fa6-brands:square-x-twitter" />
+                  </a>
+                )}
             </div>
           </div>
         ))
@@ -70,14 +73,19 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
         The idea for DevArmor was born out of our own frustration with the
-        existing Shift Left tools. Most Shift Left tools have low
-        signal-to-noise ratios and require specialized security knowledge to
-        configure and operate. As a result, AppSec engineers, not developers,
-        run Shift Left tools in most organizations. This leads to a bottleneck
-        in development and an unmet need for security in teams that don't have a
-        large AppSec team. We are on a mission to change that by building a
-        developer-first security tool that is easy to use and provides high
-        signal-to-noise ratio.
+        existing AppSec processes and Shift Left tools. Most Shift Left tools
+        have low signal-to-noise ratios and require specialized security
+        knowledge to configure and operate. As a result, AppSec engineers, not
+        developers, run Shift Left tools in most organizations. This leads to
+        slow, manual reviews that delay launches and introduce friction in the
+        teams. Similarly, AppSec tasks such as Threat Modeling are too manual
+        and slow, and rarely empower developers to make security decisions.
+      </p>
+
+      <p class="text-lg leading-relaxed text-slate-500">
+        We are on a mission to revolutionalize AppSec by building an automated
+        platform backed by the power of LLMs that augments AppSec teams and
+        makes security decisions for development teams.
       </p>
     </div>
   </Container>
