@@ -1,16 +1,17 @@
 ---
 draft: false
-title: "Redefining Application Security in The AI Era."
+title: "Application Security: Challenges and Opportunities in The AI Era."
 snippet: "Application Security (AppSec) is the most labor-intensive function in cybersecurity. Despite significant advancements in tools and automation, AppSec remains a notable bottleneck in the Software Development Lifecycle (SDLC). Traditional AppSec is slow and expensive. Shift Left tools have failed to empower developers to take charge of the security of applications. Security budget moderation and AI adoption are top priorities for executives."
 image: {
-    src: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1",
+    src: "https://devarmor-website.s3.us-west-2.amazonaws.com/20231122-appsec-challenges-stock-1.png",
     alt: "application security is complicated"
 }
-publishDate: "2022-11-08 11:39"
+publishDate: "2023-11-22 11:39"
 category: "AppSec"
 author: "Amir Kavousian"
 tags: [appsec, ai]
 ---
+
 
 Application Security (AppSec) is the most labor-intensive function in cybersecurity. Despite significant advancements in tools and automation, AppSec remains a notable bottleneck in the Software Development Lifecycle (SDLC). The Shift Left philosophy recommends running security checks earlier in the SDLC, making fixing issues cheaper and faster. However, existing Shift Left tools have failed to solve the fundamental issue of application security: developers have little to no context of security considerations, while security engineers have a very limited context of the application code, architecture, and infrastructure. As a result, AppSec has become a linear, labor-intensive process that requires time and effort from both AppSec teams and developers.
 
