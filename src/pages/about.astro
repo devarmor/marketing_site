@@ -21,9 +21,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <Fragment slot="desc"
         >We are a small passionate team with prior experience in building
         software teams and security companies. <br />
-        We are on a mission to transform how developers interact with application
-        security.</Fragment
-      >
+        </Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-20 mx-auto max-w-2xl mt-12">
@@ -72,20 +70,18 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         Why are we building DevArmor?
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        The idea for DevArmor was born out of our own frustration with the
-        existing AppSec processes and Shift Left tools. Most Shift Left tools
-        have low signal-to-noise ratios and require specialized security
-        knowledge to configure and operate. As a result, AppSec engineers, not
-        developers, run Shift Left tools in most organizations. This leads to
-        slow, manual reviews that delay launches and introduce friction in the
-        teams. Similarly, AppSec tasks such as Threat Modeling are too manual
-        and slow, and rarely empower developers to make security decisions.
+        The idea for DevArmor was born out of our own frustration with the current state of AppSec. 
+        "Shift Left" and “DevSecOps”, have failed to materialize on their promises. 
+        There are too many vulnerabilities, too many issues, and not enough time for the manual world of security. 
+        Devs don’t need more alerts in their IDEs. 
+        Instead, they need security guardrails during design and development, 
+        without the need to become security experts or to change their dev workflows.         
       </p>
 
       <p class="text-lg leading-relaxed text-slate-500">
-        We are on a mission to revolutionalize AppSec by building an automated
-        platform backed by the power of LLMs that augments AppSec teams and
-        makes security decisions for development teams.
+        We are on a mission to revolutionize AppSec with our automated platform. 
+        Acting as an embedded security engineer, DevArmor creates threat models, 
+        offers design feedback, reviews code, and generates automatic remediation suggestions.
       </p>
     </div>
   </Container>
