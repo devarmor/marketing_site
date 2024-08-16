@@ -6,7 +6,7 @@ image: {
     src: "https://devarmor-website.s3.us-west-2.amazonaws.com/20231122-appsec-challenges-stock-1.png",
     alt: "application security is complicated"
 }
-publishDate: "2023-11-22 11:39"
+publishDate: "2024-03-02 11:39"
 category: "AppSec"
 author: "Amir Kavousian"
 tags: [appsec, ai]
