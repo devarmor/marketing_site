@@ -3,8 +3,16 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Icon } from "astro-icon/components";
 
-const menuitems = [
+interface MenuItem {
+  title: string;
+  path: string;
+  children?: MenuItem[];
+  badge?: boolean;
+}
+
+const menuitems: MenuItem[] = [
   // {
   //   title: "Features",
   //   path: "#",
@@ -44,12 +52,11 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Dev</span><span
-            class="text-slate-500">Armor</span
-          >
+          ><span class="font-bold text-slate-800 dark:text-white">Dev</span
+          ><span class="text-slate-500 dark:text-slate-400">Armor</span>
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-4 h-4 text-gray-800 dark:text-white" />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
@@ -69,7 +76,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-2 items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
@@ -89,11 +96,24 @@ const menuitems = [
         </div> -->
       </MenuItems>
     </Astronav>
-    <div>
+    <div class="flex items-center gap-4">
       <div class="hidden lg:flex items-center gap-4">
-        <a href="https://calendly.com/amir-devarmor/30min">Book a Demo</a>
+        <a
+          href="https://calendly.com/amir-devarmor/30min"
+          class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+          >Book a Demo</a
+        >
         <Link href="/contact" size="md">Get Early Access</Link>
       </div>
+      <button
+        id="theme-toggle"
+        class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-200"
+        aria-label="Toggle dark mode">
+        <span class="sr-only">Toggle dark mode</span>
+        <span
+          class="inline-block h-4 w-4 transform rounded-full bg-white dark:bg-gray-300 transition-transform duration-200 translate-x-1 dark:translate-x-6"
+        ></span>
+      </button>
     </div>
   </header>
 </Container>
