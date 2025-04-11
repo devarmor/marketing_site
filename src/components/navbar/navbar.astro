@@ -27,14 +27,14 @@ const menuitems: MenuItem[] = [
   //   title: "Pricing",
   //   path: "/pricing",
   // },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
+  // {
+  //   title: "About",
+  //   path: "/about",
+  // },
+  // {
+  //   title: "Blog",
+  //   path: "/blog",
+  // },
   // {
   //   title: "Join Waitlist",
   //   path: "/contact",
@@ -51,9 +51,13 @@ const menuitems: MenuItem[] = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800 dark:text-white">Dev</span
-          ><span class="text-slate-500 dark:text-slate-400">Armor</span>
+        <a href="/" class="text-lg">
+          <img
+            id="logo"
+            src="/DevArmor_FullLogo_LightMode.svg"
+            alt="DevArmor"
+            class="h-12"
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800 dark:text-white" />
@@ -99,8 +103,18 @@ const menuitems: MenuItem[] = [
     <div class="flex items-center gap-4">
       <div class="hidden lg:flex items-center gap-4">
         <a
-          href="https://calendly.com/amir-devarmor/30min"
+          href="/about"
           class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+          >About</a
+        >
+        <a
+          href="/blog"
+          class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+          >Blog</a
+        >
+        <a
+          href="https://calendly.com/amir-devarmor/30min"
+          class="px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white border border-gray-300 dark:border-gray-600 rounded-md hover:border-gray-400 dark:hover:border-gray-500 transition-colors duration-200"
           >Book a Demo</a
         >
         <Link href="/contact" size="md">Get Early Access</Link>
@@ -117,3 +131,29 @@ const menuitems: MenuItem[] = [
     </div>
   </header>
 </Container>
+
+<script>
+  // Update logo based on theme
+  function updateLogo() {
+    const logo = document.getElementById("logo") as HTMLImageElement | null;
+    if (logo) {
+      if (document.documentElement.classList.contains("dark")) {
+        logo.src = "/DevArmor_FullLogo_DarkMode.svg";
+      } else {
+        logo.src = "/DevArmor_FullLogo_LightMode.svg";
+      }
+    }
+  }
+
+  // Initial logo setup
+  updateLogo();
+
+  // Listen for theme changes
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      // Wait for the theme class to be updated
+      setTimeout(updateLogo, 0);
+    });
+  }
+</script>
