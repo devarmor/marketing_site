@@ -3,10 +3,12 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import ApplicationFooter from "@components/careers/application-footer.astro";
-import { Fragment } from "astro/jsx-runtime";
+import { Icon } from "astro-icon/components";
+
+const title = "AI Systems Engineer";
 ---
 
-<Layout title="AI Systems Engineer">
+<Layout title={title}>
   <Container>
     <Sectionhead>
       <Fragment slot="title">AI Systems Engineer</Fragment>
