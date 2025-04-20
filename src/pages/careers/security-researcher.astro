@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import ApplicationFooter from "@components/careers/application-footer.astro";
 ---
 
 <Layout title="Security Researcher">
@@ -9,7 +10,7 @@ import Sectionhead from "@components/sectionhead.astro";
     <Sectionhead>
       <Fragment slot="title">Security Researcher</Fragment>
       <Fragment slot="desc"
-        >Research and develop new security patterns and threat models.<br />
+        >Research and develop innovative security solutions.<br />
       </Fragment>
     </Sectionhead>
 
@@ -29,10 +30,10 @@ import Sectionhead from "@components/sectionhead.astro";
           About the Role
         </h2>
         <p class="text-gray-600 dark:text-gray-100">
-          We're looking for a Security Researcher to join our team in developing
-          new security patterns, threat models, and automated security analysis
-          techniques. You'll play a key role in advancing our understanding of
-          security threats and developing innovative solutions to address them.
+          We're looking for a security researcher to help us develop innovative
+          solutions for automated security analysis. You'll work on identifying
+          security patterns, developing new analysis techniques, and improving
+          our platform's security capabilities.
         </p>
       </section>
 
@@ -42,42 +43,39 @@ import Sectionhead from "@components/sectionhead.astro";
         </h2>
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
-          <li>Research and develop new security patterns and threat models</li>
-          <li>Analyze emerging security threats and vulnerabilities</li>
-          <li>Design and implement automated security analysis techniques</li>
-          <li>
-            Collaborate with engineering teams to integrate research findings
-          </li>
-          <li>Contribute to security standards and best practices</li>
-          <li>Stay current with security research and industry trends</li>
+          <li>Research security vulnerabilities and patterns</li>
+          <li>Develop new security analysis techniques</li>
+          <li>Create security rules and policies</li>
+          <li>Collaborate with engineering teams</li>
+          <li>Stay current with security trends and threats</li>
+          <li>Contribute to security documentation and training</li>
         </ul>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          Requirements
+          Required Skills & Experience
         </h2>
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
-          <li>Strong background in security research and analysis</li>
-          <li>Experience with threat modeling and risk assessment</li>
-          <li>Knowledge of security frameworks and standards</li>
-          <li>Understanding of software security principles</li>
-          <li>Experience with security tools and methodologies</li>
-          <li>Excellent analytical and problem-solving skills</li>
+          <li>Strong background in application security</li>
+          <li>Experience with security tools and frameworks</li>
+          <li>Knowledge of common vulnerabilities and attacks</li>
+          <li>Understanding of secure coding practices</li>
+          <li>Experience with threat modeling</li>
         </ul>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          Nice to Have
+          Preferred Qualifications
         </h2>
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
           <li>Experience with security automation</li>
-          <li>Contributions to security research or open-source projects</li>
-          <li>Knowledge of machine learning in security</li>
-          <li>Experience with cloud security</li>
+          <li>Knowledge of AI/ML in security</li>
+          <li>Contributions to security research</li>
+          <li>Experience with compliance frameworks</li>
         </ul>
       </section>
 
@@ -90,6 +88,8 @@ import Sectionhead from "@components/sectionhead.astro";
           >Apply Now</a
         >
       </div>
+
+      <ApplicationFooter />
     </div>
   </Container>
 </Layout>

@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import ApplicationFooter from "@components/careers/application-footer.astro";
 ---
 
 <Layout title="Frontend Engineer">
@@ -9,8 +10,8 @@ import Sectionhead from "@components/sectionhead.astro";
     <Sectionhead>
       <Fragment slot="title">Frontend Engineer</Fragment>
       <Fragment slot="desc"
-        >Create intuitive and responsive user interfaces for our security
-        platform.<br />
+        >Build beautiful, responsive user interfaces for our security platform.<br
+        />
       </Fragment>
     </Sectionhead>
 
@@ -30,11 +31,10 @@ import Sectionhead from "@components/sectionhead.astro";
           About the Role
         </h2>
         <p class="text-gray-600 dark:text-gray-100">
-          We're looking for a Frontend Engineer to create intuitive and
-          responsive user interfaces that make complex security concepts
-          accessible to our users. You'll work closely with our security and
-          backend teams to build a seamless user experience for our security
-          automation platform.
+          We're looking for a frontend engineer to help us build intuitive and
+          beautiful user interfaces for our security platform. You'll work
+          closely with our design team and backend engineers to create seamless
+          user experiences that make security accessible to developers.
         </p>
       </section>
 
@@ -45,41 +45,38 @@ import Sectionhead from "@components/sectionhead.astro";
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
           <li>Develop responsive and accessible user interfaces</li>
-          <li>Implement interactive security visualization components</li>
-          <li>Optimize frontend performance and user experience</li>
+          <li>Implement interactive features and animations</li>
+          <li>Optimize performance and loading times</li>
           <li>Collaborate with designers and backend engineers</li>
-          <li>Write clean, maintainable, and well-documented code</li>
-          <li>Ensure cross-browser and cross-device compatibility</li>
+          <li>Write clean, maintainable code</li>
+          <li>Participate in code reviews and team discussions</li>
         </ul>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          Requirements
+          Required Skills & Experience
         </h2>
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
-          <li>
-            Strong experience with modern frontend frameworks (React, Vue, etc.)
-          </li>
-          <li>Proficiency in HTML, CSS, and JavaScript/TypeScript</li>
-          <li>Experience with responsive design and accessibility</li>
-          <li>Understanding of frontend build tools and workflows</li>
-          <li>Knowledge of UI/UX principles and best practices</li>
-          <li>Experience with RESTful APIs and state management</li>
+          <li>Strong proficiency in React and TypeScript</li>
+          <li>Experience with modern CSS frameworks (Tailwind CSS)</li>
+          <li>Understanding of web performance optimization</li>
+          <li>Experience with responsive design</li>
+          <li>Knowledge of accessibility best practices</li>
         </ul>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          Nice to Have
+          Preferred Qualifications
         </h2>
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
-          <li>Experience with data visualization libraries</li>
-          <li>Knowledge of security concepts and terminology</li>
-          <li>Contributions to open-source projects</li>
+          <li>Experience with security tools or platforms</li>
+          <li>Knowledge of data visualization libraries</li>
           <li>Experience with testing frameworks</li>
+          <li>Contributions to open-source projects</li>
         </ul>
       </section>
 
@@ -92,6 +89,8 @@ import Sectionhead from "@components/sectionhead.astro";
           >Apply Now</a
         >
       </div>
+
+      <ApplicationFooter />
     </div>
   </Container>
 </Layout>
