@@ -10,7 +10,7 @@ import ApplicationFooter from "@components/careers/application-footer.astro";
     <Sectionhead>
       <Fragment slot="title">Backend Engineer</Fragment>
       <Fragment slot="desc"
-        >Build and scale our core security automation platform.<br />
+        >Build and scale our LLM API & Application Integrations.<br />
       </Fragment>
     </Sectionhead>
 
@@ -25,15 +25,45 @@ import ApplicationFooter from "@components/careers/application-footer.astro";
         >
       </div>
 
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <div>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Location</p>
+          <p class="font-medium text-gray-800 dark:text-white">Hybrid</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Job Type</p>
+          <p class="font-medium text-gray-800 dark:text-white">Full-Time</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Experience Level
+          </p>
+          <p class="font-medium text-gray-800 dark:text-white">Mid-Senior</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Salary Range</p>
+          <p class="font-medium text-gray-800 dark:text-white">
+            $160,000-$180,000 Base + Equity
+          </p>
+        </div>
+      </div>
+
       <section>
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
           Backend Engineer
         </h2>
         <p class="mt-4 text-gray-600 dark:text-gray-100">
-          We're looking for a Backend Engineer to help us build and scale our
-          core infrastructure. You'll be responsible for developing robust,
-          secure, and high-performance backend systems that power our security
-          automation platform.
+          We're looking for a Backend Engineer to to co-lead our implementation
+          efforts at the intersection of LLMs and software security, helping us
+          build both a powerful product and a strong engineering foundation.
+          You’ll be a core member of our growing team, with the experience and
+          judgment to influence our product, culture, and technical direction.
+          <br />
+          You’ll have the autonomy to challenge assumptions, explore unconventional
+          approaches, and drive progress in automated security reasoning. This role
+          involves navigating ambiguity, making smart trade-offs, and knowing when
+          to optimize—and when to move fast.
         </p>
       </section>
 
@@ -44,120 +74,125 @@ import ApplicationFooter from "@components/careers/application-footer.astro";
         <ul
           class="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-100">
           <li>
-            Design and implement scalable backend services and APIs for our
-            security automation platform
+            <strong>Architecture & systems design</strong>: Grow and maintain
+            the codebase and systems architecture—from development to
+            deployment, observability, and security.
           </li>
           <li>
-            Develop and maintain high-performance data processing pipelines for
-            security analysis
+            <strong>Task understanding with LLMs</strong>: Build systems that
+            extract requirements and implementation intent from task
+            descriptions and design docs (e.g., Jira, Confluence, Google Docs).
           </li>
           <li>
-            Implement robust security measures and best practices throughout the
-            backend infrastructure
+            <strong>Code understanding with LLMs</strong>: Use LLMs to analyze
+            codebases and detect deviations from secure patterns and best
+            practices.
           </li>
           <li>
-            Collaborate with frontend engineers to design and implement
-            efficient API endpoints
+            <strong>API development</strong>: Build and maintain APIs that power
+            the product UI and connect internal services.
           </li>
           <li>
-            Optimize database queries and implement caching strategies for
-            improved performance
+            <strong>3rd-party integrations</strong>: Develop secure integrations
+            with tools like Atlassian, Google Workspace, and GitHub, including
+            enterprise-ready auth flows.
           </li>
           <li>
-            Write clean, maintainable, and well-documented code with
-            comprehensive test coverage
+            <strong>Data infrastructure</strong>: Design, manage, and operate
+            data stores to support product features and performance.
+          </li>
+          <li>
+            <strong>Performance & scalability</strong>: Ensure backend systems
+            support large-scale enterprise use with low latency and high
+            availability.
+          </li>
+          <li>
+            <strong>Modern engineering</strong>: Practice infrastructure as
+            code, CI/CD, automated testing, and agile development (Kanban).
           </li>
         </ul>
       </section>
 
       <section class="mt-12">
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">
-          Requirements
+          Required Skills & Experience
         </h2>
         <ul
           class="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-100">
           <li>
-            Strong experience with backend development using modern programming
-            languages (Python, Go, or Java)
+            5+ years building SaaS products, ideally for enterprise customers
           </li>
           <li>
-            Deep understanding of distributed systems, microservices
-            architecture, and cloud platforms
+            3+ years developing APIs in Python using modern frameworks (FastAPI,
+            Flask, Django, Chalice, Lambda Powertools)
           </li>
           <li>
-            Experience with database design, optimization, and working with both
-            SQL and NoSQL databases
+            Experience with async programming in Python (e.g., asyncio, AnyIO,
+            or Trio)
+          </li>
+          <li>Strong experience integrating with third-party APIs</li>
+          <li>Proficient in SQL, ideally with PostgreSQL</li>
+          <li>Experience with infrastructure-as-code tools like Terraform</li>
+          <li>
+            Familiarity with AI model APIs such as OpenAI, Anthropic, or Hugging
+            Face
           </li>
           <li>
-            Familiarity with security best practices and common vulnerabilities
+            Knowledge of performance techniques: caching, rate limiting,
+            profiling, and optimization
           </li>
+          <li>Comfortable with Docker and containerized development</li>
           <li>
-            Strong problem-solving skills and ability to work independently
-          </li>
-          <li>
-            Excellent communication skills and ability to collaborate
-            effectively with cross-functional teams
+            Familiar with modern engineering practices: infrastructure as code,
+            CI/CD, testing, and Kanban workflows
           </li>
         </ul>
       </section>
 
       <section class="mt-12">
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">
-          Nice to Have
+          Preferred Qualifications
         </h2>
         <ul
           class="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-100">
-          <li>Experience with security automation tools and frameworks</li>
+          <li>Experience working with vector databases (e.g., pg_vector).</li>
           <li>
-            Knowledge of containerization technologies (Docker, Kubernetes)
+            Familiarity with LLM fine-tuning, embeddings, and prompt
+            engineering.
           </li>
-          <li>Experience with message queues and event-driven architectures</li>
-          <li>Contributions to open-source projects</li>
-          <li>Experience with CI/CD pipelines and infrastructure as code</li>
+          <li>
+            Experience programmatically integrating with developer tools (e.g.,
+            Jira, GitHub, GitLab, AWS).
+          </li>
+          <li>
+            Experience with OAuth, JWT, SAML, and other authentication
+            protocols.
+          </li>
+          <li>Experience with serverless architectures (e.g., AWS Lambda).</li>
         </ul>
       </section>
 
-      <section class="mt-12">
-        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          Benefits
-        </h2>
-        <ul
-          class="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-100">
-          <li>Competitive salary and equity</li>
-          <li>Health, dental, and vision insurance</li>
-          <li>Remote-first work environment</li>
-          <li>Professional development budget</li>
-          <li>Flexible work hours</li>
-          <li>Generous vacation policy</li>
-        </ul>
-      </section>
-
-      <section class="mt-12">
-        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          How to Apply
-        </h2>
-        <p class="text-gray-600 dark:text-gray-100">
-          If you're passionate about building secure and scalable backend
-          systems, we'd love to hear from you. Please send your resume and a
-          brief introduction to
-          <a
-            href="mailto:careers@devarmor.com?subject=Backend Engineer Application"
-            class="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200"
-            >careers@devarmor.com</a
-          >
-        </p>
-        <div class="flex justify-center mt-8">
-          <a
-            href="https://forms.gle/VYgs78pD4nLFHsZRA"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400 transition-colors"
-            >Apply Now</a
-          >
-        </div>
-      </section>
+      <div class="flex justify-center mt-8">
+        <a
+          href="https://forms.gle/VYgs78pD4nLFHsZRA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400 transition-colors"
+          >Apply Now</a
+        >
+      </div>
 
       <ApplicationFooter />
+
+      <div class="flex justify-center mt-12">
+        <a
+          href="https://forms.gle/VYgs78pD4nLFHsZRA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400 transition-colors"
+          >Apply Now</a
+        >
+      </div>
     </div>
   </Container>
 </Layout>
