@@ -47,19 +47,19 @@ const menuitems: MenuItem[] = [
 ];
 ---
 
-<Container
+<header
   class="sticky top-0 z-50 bg-white dark:bg-[#050833] dark:shadow-sm transition-colors duration-200 ease-in-out">
-  <header>
+  <Container>
     <div class="flex flex-col lg:flex-row justify-between items-center py-4">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
           <div class="flex items-center gap-4">
-            <a href="/" class="text-lg">
+            <a href="/" class="text-lg w-[140px] flex-shrink-0">
               <img
                 id="logo"
                 src="/DevArmor_FullLogo_LightMode.svg"
                 alt="DevArmor"
-                class="h-12"
+                class="h-12 w-full object-contain"
               />
             </a>
             <button
@@ -155,8 +155,8 @@ const menuitems: MenuItem[] = [
         </div>
       </div>
     </div>
-  </header>
-</Container>
+  </Container>
+</header>
 
 <script>
   // Update logo based on theme
