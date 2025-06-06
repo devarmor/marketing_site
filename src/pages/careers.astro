@@ -2,156 +2,74 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import { Icon } from "astro-icon/components";
+
+const jobs = [
+  {
+    title: "Founding AI Engineer",
+    description:
+      "Build and scale our AI-powered security automation platform. You'll work on cutting-edge AI systems that revolutionize how security is integrated into the development process.",
+    link: "/careers/founding-ai-engineer",
+  },
+  {
+    title: "Backend Engineer",
+    description:
+      "Design and implement robust backend systems that power our security automation platform. You'll work on scalable APIs, data processing pipelines, and security-focused features.",
+    link: "/careers/backend-engineer",
+  },
+  {
+    title: "Frontend Engineer",
+    description:
+      "Create beautiful, responsive user interfaces for our security platform. You'll work on modern web applications that make security accessible and intuitive for developers.",
+    link: "/careers/frontend-engineer",
+  },
+  {
+    title: "Founding Security Researcher",
+    description:
+      "Research and develop new security patterns, threat models, and automated security analysis techniques. Help shape the future of application security.",
+    link: "/careers/security-researcher",
+  },
+];
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
-<Layout title="Careers">
+<Layout
+  title="Careers"
+  description="Join DevArmor and help build the future of application security. We're looking for passionate individuals to join our mission."
+  canonicalURL={canonicalURL}>
   <Container>
     <Sectionhead>
       <Fragment slot="title">Join Our Team</Fragment>
-      <Fragment slot="desc"
-        >Help us build the future of security automation.<br />
+      <Fragment slot="desc">
+        We're building the future of application security. Join us in our
+        mission to make security accessible to every developer.
       </Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-8 mx-auto max-w-4xl mt-16">
-      <section>
-        <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
-          Why Work at DevArmor?
-        </h2>
-        <p class="mt-4 text-gray-600 dark:text-gray-100">
-          At DevArmor, we're on a mission to revolutionize security automation.
-          We're looking for passionate individuals who want to make a real
-          impact in the cybersecurity space.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
-              Our Culture
+    <div class="mt-16 flex flex-col gap-8 max-w-4xl mx-auto">
+      {
+        jobs.map((job) => (
+          <div class="group relative rounded-lg border border-gray-200 p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-800">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
+              {job.title}
             </h3>
-            <ul
-              class="list-disc list-inside mt-4 text-gray-600 dark:text-gray-100">
-              <li>Solve hard, meaningful problems</li>
-              <li>Work with exceptional people</li>
-              <li>Own your work</li>
-              <li>Operate at the edge of AI + AppSec</li>
-            </ul>
-          </div>
-
-          <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
-              Benefits
-            </h3>
-            <ul
-              class="list-disc list-inside mt-4 text-gray-600 dark:text-gray-100">
-              <li>Competitive salary and equity</li>
-              <li>100% coverage for medical, dental, and vision</li>
-              <li>Flexible work environment</li>
-              <li>High-Trust, Low-Ego Team</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="mt-12">
-        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">
-          Open Positions
-        </h2>
-
-        <div class="space-y-16">
-          <div
-            class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
-              AI Systems Engineer
-            </h3>
-            <p class="text-gray-600 dark:text-gray-100 mt-2">
-              Full-time • Remote
-            </p>
-            <p class="mt-4 text-gray-600 dark:text-gray-100">
-              Design and implement AI-powered security automation systems that
-              help organizations identify and mitigate threats.
+            <p class="mt-4 text-gray-600 dark:text-gray-400">
+              {job.description}
             </p>
             <a
-              href="/careers/ai-systems-engineer"
-              class="inline-block mt-12 text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200"
-              >Learn More</a
-            >
+              href={job.link}
+              class="mt-6 inline-flex items-center text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
+              Learn more
+              <Icon
+                name="mdi:arrow-right"
+                class="ml-2 h-5 w-5"
+                aria-hidden="true"
+              />
+            </a>
           </div>
-
-          <div
-            class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
-              Backend Engineer
-            </h3>
-            <p class="text-gray-600 dark:text-gray-100 mt-2">
-              Full-time • Remote
-            </p>
-            <p class="mt-4 text-gray-600 dark:text-gray-100">
-              Build and scale our core backend infrastructure to handle complex
-              security analysis and automation workflows.
-            </p>
-            <a
-              href="/careers/backend-engineer"
-              class="inline-block mt-12 text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200"
-              >Learn More</a
-            >
-          </div>
-
-          <div
-            class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
-              Frontend Engineer
-            </h3>
-            <p class="text-gray-600 dark:text-gray-100 mt-2">
-              Full-time • Remote
-            </p>
-            <p class="mt-4 text-gray-600 dark:text-gray-100">
-              Create intuitive and responsive user interfaces that make complex
-              security concepts accessible to our users.
-            </p>
-            <a
-              href="/careers/frontend-engineer"
-              class="inline-block mt-12 text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200"
-              >Learn More</a
-            >
-          </div>
-
-          <div
-            class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">
-              Security Researcher
-            </h3>
-            <p class="text-gray-600 dark:text-gray-100 mt-2">
-              Full-time • Remote
-            </p>
-            <p class="mt-4 text-gray-600 dark:text-gray-100">
-              Research and develop new security patterns, threat models, and
-              automated security analysis techniques.
-            </p>
-            <a
-              href="/careers/security-researcher"
-              class="inline-block mt-12 text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200"
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="mt-12">
-        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          Don't See Your Role?
-        </h2>
-        <p class="text-gray-600 dark:text-gray-100">
-          We're always looking for talented individuals to join our team. If you
-          don't see a position that matches your skills but believe you'd be a
-          great fit, we'd love to hear from you.
-        </p>
-        <a
-          href="mailto:careers@devarmor.com?subject=General Application"
-          class="inline-block mt-4 text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200"
-          >Send us your resume</a
-        >
-      </section>
+        ))
+      }
     </div>
   </Container>
 </Layout>

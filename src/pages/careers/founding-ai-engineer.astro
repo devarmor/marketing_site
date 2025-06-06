@@ -5,13 +5,13 @@ import Sectionhead from "@components/sectionhead.astro";
 import ApplicationFooter from "@components/careers/application-footer.astro";
 import { Icon } from "astro-icon/components";
 
-const title = "AI Systems Engineer";
+const title = "Founding AI Engineer";
 ---
 
 <Layout title={title}>
   <Container>
     <Sectionhead>
-      <Fragment slot="title">AI Systems Engineer</Fragment>
+      <Fragment slot="title">Founding AI Engineer</Fragment>
       <Fragment slot="desc"
         >Design and implement AI-powered security automation systems.<br />
       </Fragment>
@@ -51,17 +51,11 @@ const title = "AI Systems Engineer";
           About the Role
         </h2>
         <p class="text-gray-600 dark:text-gray-100">
-          We're looking for a senior engineer to co-lead our research and
-          implementation efforts on applying LLMs and other ML techniques to
-          reason about software security. You'll play a critical role in shaping
-          not just the product, but also our technical direction, engineering
-          culture, and team.
-          <br />
-          We value strong judgment and principled thinking—you'll have the autonomy
-          to challenge assumptions, explore unconventional ideas, and chart the right
-          course between rigor and speed. This role is about navigating ambiguity,
-          making deliberate trade-offs, and pushing the boundaries of what's possible
-          in automated security reasoning.
+          We're looking for a founding engineer to co-lead our efforts in
+          applying LLMs and other ML techniques to automate software security
+          reasoning. You’ll help shape our product, technical direction, and
+          team culture. This role requires strong judgment, creativity, and
+          comfort with ambiguity as we explore the edge of automated security.
         </p>
       </section>
 
@@ -69,40 +63,40 @@ const title = "AI Systems Engineer";
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
           Responsibilities
         </h2>
+        You will lead the development of deterministic and probabilistic systems
+        that reason about and automate security tasks, including:
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
           <li>
-            <strong>High-level security reasoning</strong>: Build systems that
-            analyze architecture and posture to infer risks and generate
+            <strong>Security Reasoning</strong>: Analyze architecture, specs,
+            and code to infer risks and generate actionable security
+            requirements.
+          </li>
+          <li>
+            <strong>Design Validation</strong>: Analyze product specs and task
+            descriptions, written in natural language, to generate concrete
             security requirements and recommendations.
           </li>
           <li>
-            <strong>Tactical security reasoning</strong>: Analyze product specs
-            and task descriptions to generate concrete security requirements
-            before code is written.
-          </li>
-          <li>
-            <strong>Security pattern enforcement</strong>: Leverage
-            organizational and codebase context to identify, codify, and enforce
-            security best practices across the SDLC.
+            <strong>Security pattern enforcement</strong>: Verify code changes
+            align with approved security designs.
           </li>
           <li>
             <strong>Toolchain integration</strong>: Connect with tools like
-            Google Docs, Confluence, Jira, and GitHub to ingest development
-            artifacts.
+            Google Docs, Confluence, Jira, GitHub, and process PDFs to ingest
+            development artifacts.
           </li>
           <li>
             <strong>LLM & model engineering</strong>: Fine-tune, benchmark, and
-            optimize LLMs and ML models for security-specific reasoning tasks.
+            optimize LLMs for security use cases.
           </li>
           <li>
-            <strong>Scalability & performance</strong>: Design AI systems to
-            efficiently process large-scale codebases and documentation.
+            <strong>Scalability & performance</strong>: Handle large-scale
+            codebases and documentation.
           </li>
           <li>
-            <strong>Modern engineering practices</strong>: Use infrastructure as
-            code, write robust tests, follow CI/CD workflows, and collaborate in
-            a Kanban process.
+            <strong>Modern engineering practices</strong>: Use IaC, write tests,
+            follow CI/CD, and work in agile teams.
           </li>
         </ul>
       </section>
@@ -113,51 +107,34 @@ const title = "AI Systems Engineer";
         </h2>
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
+          <li>3+ years in AI/ML, ideally with LLMs or autonomous agents</li>
+          <li>Strong Python skills and familiarity with ML frameworks</li>
           <li>
-            <strong>AI & Machine Learning</strong>: 2+ years of experience in
-            AI/ML, preferably with LLMs and autonomous agents.
-          </li>
-          <li>
-            <strong>Programming & AI Development</strong>: Proficiency in Python
-            and AI/ML frameworks (e.g., TensorFlow, PyTorch, LangChain, OpenAI
-            APIs).
-          </li>
-          <li>
-            <strong>Software Development & DevSecOps</strong>: Experience with
-            software development lifecycles, version control (Git),
-            Infrastructure-as-Code (e.g., Terraform) and CI/CD pipelines (e.g.,
-            GitHub Actions).
-          </li>
-          <li>
-            <strong>APIs & Integrations</strong>: Familiarity with API
-            development and integrations with developer tools (e.g., Jira,
-            GitHub).
-          </li>
-          <li>
-            <strong>Software Security</strong>: Familiarity with application
-            security, security design principles, and threat modeling
-            methodologies.
+            Experience with Git, IaC (e.g., Terraform), and CI/CD (e.g., GitHub
+            Actions)
           </li>
         </ul>
       </section>
 
       <section>
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-          Preferred Qualifications
+          Bonus Points
         </h2>
         <ul
           class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-100">
           <li>
-            Experience working with security tooling (e.g., Semgrep, CodeQL,
-            Snyk).
+            Experience working with security tools (Semgrep, CodeQL, Snyk).
           </li>
           <li>
-            Knowledge of graph-based reasoning, semantic analysis, or symbolic
-            AI.
+            Experience with API integrations, SaaS, and dev tools (e.g., Jira,
+            GitHub)
           </li>
           <li>
-            Experience in fintech, healthtech, media, or other regulated
-            industries where security compliance is critical.
+            Background in graph reasoning, semantic analysis, or symbolic AI
+          </li>
+          <li>
+            Familiarity with AppSec, threat modeling, or regulated industries
+            like fintech or healthtech
           </li>
         </ul>
       </section>
