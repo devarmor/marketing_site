@@ -8,7 +8,7 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.devarmor.com",
-  output: "server", // Enable server-side rendering for form handling
+  output: "hybrid", // Hybrid mode: static by default, server when needed
   adapter: vercel(),
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
