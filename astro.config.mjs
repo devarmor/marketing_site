@@ -7,5 +7,6 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.devarmor.com",
+  output: "server", // Enable server-side rendering for form handling
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
