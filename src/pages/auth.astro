@@ -1,0 +1,117 @@
+---
+export const prerender = false; // Force server-side rendering for this page
+
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+// Simple password - you can change this
+const CORRECT_PASSWORD = "SecureByDesign<3";
+
+// Check if user is already authenticated
+const authCookie = Astro.cookies.get("preview-auth");
+const isAuthenticated = authCookie?.value === "true";
+
+// Handle form submission
+if (Astro.request.method === "POST") {
+  try {
+    const formData = await Astro.request.formData();
+    const password = formData.get("password");
+
+    if (password === CORRECT_PASSWORD) {
+      // Set authentication cookie with conditional secure setting
+      const isHttps = Astro.url.protocol === "https:";
+      Astro.cookies.set("preview-auth", "true", {
+        path: "/",
+        httpOnly: false, // Allow JavaScript access for debugging
+        secure: isHttps, // Only use secure in production
+        sameSite: "lax", // More permissive for localhost
+        maxAge: 60 * 60 * 24 * 7, // 7 days
+      });
+
+      // Redirect to home page
+      return Astro.redirect("/");
+    } else {
+      // For debugging - log incorrect password attempts
+      console.log("Incorrect password attempt:", password);
+    }
+  } catch (error) {
+    console.error("Form parsing error:", error);
+  }
+}
+
+// If already authenticated, redirect to home
+if (isAuthenticated) {
+  return Astro.redirect("/");
+}
+---
+
+<Layout
+  title="Preview Access - DevArmor"
+  description="Preview access for DevArmor website"
+  canonicalURL={new URL("/auth", Astro.site).toString()}>
+  <Container>
+    <div class="min-h-screen flex items-center justify-center">
+      <div
+        class="max-w-md w-full space-y-8 p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+        <div class="text-center">
+          <img
+            src="/DevArmor_FullLogo_LightMode.svg"
+            alt="DevArmor"
+            class="h-12 mx-auto mb-8 dark:hidden"
+          />
+          <img
+            src="/DevArmor_FullLogo_DarkMode.svg"
+            alt="DevArmor"
+            class="h-12 mx-auto mb-8 hidden dark:block"
+          />
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+            Preview Access
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300">
+            Enter the password to access the preview site
+          </p>
+        </div>
+
+        <form method="POST" class="space-y-6" id="auth-form">
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              class="appearance-none relative block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-[#f44b88] focus:border-[#f44b88] focus:z-10 sm:text-sm"
+              placeholder="Enter password"
+            />
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#f44b88] hover:bg-[#e03a77] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f44b88] transition-colors duration-200">
+              Access Preview
+            </button>
+          </div>
+        </form>
+
+        <script>
+          // Debug form submission
+          const form = document.getElementById("auth-form") as HTMLFormElement;
+          const passwordInput = document.getElementById(
+            "password"
+          ) as HTMLInputElement;
+
+          if (form && passwordInput) {
+            form.addEventListener("submit", function (e) {
+              console.log("Form submitted");
+              console.log(
+                "Password entered:",
+                passwordInput.value ? "***" : "empty"
+              );
+            });
+          }
+        </script>
+      </div>
+    </div>
+  </Container>
+</Layout>

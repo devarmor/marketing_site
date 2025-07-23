@@ -3,12 +3,10 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
-import vercel from "@astrojs/vercel/static";
 
-// https://astro.build/config
+// Development config for testing password protection locally
 export default defineConfig({
   site: "https://www.devarmor.com",
-  output: "static", // Static output for production (fast edge deployment)
-  adapter: vercel(),
+  output: "server", // Server mode for local testing
   integrations: [tailwind(), mdx(), sitemap(), icon()],
-});
+}); 
