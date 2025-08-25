@@ -1,8 +1,8 @@
 import { defineMiddleware } from 'astro:middleware';
 
 export const onRequest = defineMiddleware(async (context, next) => {
-  // Apply to preview domain or localhost for testing
-  if (context.url.hostname === 'preview.devarmor.com' || context.url.hostname === 'localhost') {
+  // Only apply to preview domain (not localhost)
+  if (context.url.hostname === 'preview.devarmor.com') {
     // Skip auth check for the auth page itself
     if (context.url.pathname === '/auth') {
       return next();
