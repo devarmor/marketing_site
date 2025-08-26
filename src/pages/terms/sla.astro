@@ -1,0 +1,158 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import SectionHead from "@components/sectionhead.astro";
+---
+
+<Layout
+  title="Service Level Agreement - DevArmor"
+  description="DevArmor's Service Level Agreement outlining uptime commitments, support response times, and service credits."
+  canonicalURL={new URL("/terms/sla", Astro.site).toString()}>
+  <Container>
+    <div class="mx-auto max-w-4xl mt-16">
+      <SectionHead
+        title="Service Level Agreement"
+        description="What you can expect from our platform and what happens if things go wrong"
+      />
+
+      <div class="prose prose-lg max-w-none mt-8">
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Welcome to DevArmor! We're committed to providing a secure, fast, and
+          reliable experience. This SLA outlines what you can expect from our
+          platform, and what happens if things go wrong.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          1. Uptime Commitment
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          We aim to maintain <strong>99.9% uptime</strong> for our core platform
+          services each month (excluding scheduled maintenance or force majeure events).
+          That's less than ~43 minutes of unplanned downtime per month.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          2. Support Response Times
+        </h2>
+        <div class="overflow-x-auto mb-6">
+          <table
+            class="min-w-full border border-gray-300 dark:border-gray-600 rounded-lg">
+            <thead class="bg-gray-50 dark:bg-gray-800">
+              <tr>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider border-b border-gray-300 dark:border-gray-600">
+                  Severity Level
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider border-b border-gray-300 dark:border-gray-600">
+                  What It Means
+                </th>
+                <th
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider border-b border-gray-300 dark:border-gray-600">
+                  Initial Response Time
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="bg-white dark:bg-gray-900 divide-y divide-gray-300 dark:divide-gray-600">
+              <tr>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-red-600 dark:text-red-400">
+                  Critical (System Down)
+                </td>
+                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                  Platform is unavailable or severely impacted
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                  &lt; 2 business hours
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-orange-600 dark:text-orange-400">
+                  Major (Partial Disruption)
+                </td>
+                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                  Key features not working as expected
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                  &lt; 4 business hours
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600 dark:text-blue-400">
+                  Minor (General Issues)
+                </td>
+                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                  Bugs, usability, or informational questions
+                </td>
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                  &lt; 1 business day
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          Support is provided during business hours (9am–6pm PT, Monday–Friday).
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          3. Maintenance Windows
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          We perform routine maintenance during off-peak hours (usually weekends
+          or late evenings PT). We'll do our best to notify you at least 24
+          hours in advance if there's potential impact.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          4. Service Credits
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          If we fall below 99.9% uptime in a given month, you may be eligible
+          for a pro-rated service credit on your next invoice. Just email us at <a
+            href="mailto:support@devarmor.com"
+            class="text-[#f44b88] hover:underline">support@devarmor.com</a
+          > within 30 days of the incident.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          5. Limitations
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          This SLA does not apply to:
+        </p>
+        <ul
+          class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-6 space-y-2">
+          <li>Issues caused by your own network or internet provider.</li>
+          <li>Third-party integrations outside our control.</li>
+          <li>Beta features or sandbox environments.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          6. Need Help?
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          We're always here to help. Contact our team at <a
+            href="mailto:support@devarmor.com"
+            class="text-[#f44b88] hover:underline">support@devarmor.com</a
+          > and we'll get you sorted.
+        </p>
+
+        <div
+          class="bg-gray-50 dark:bg-gray-800 border-l-4 border-gray-300 dark:border-gray-600 p-6 mt-8 rounded-r-lg">
+          <p class="text-sm text-gray-600 dark:text-gray-400 italic">
+            This SLA is informational only and doesn't create a legal warranty
+            or guarantee. We may update it from time to time, and we'll post any
+            changes here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

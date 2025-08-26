@@ -5,15 +5,12 @@ import Sectionhead from "@components/sectionhead.astro";
 import ApplicationFooter from "@components/careers/application-footer.astro";
 ---
 
-<Layout
-  title="Backend Engineer – LLM API & Application Integrations"
-  description="Join DevArmor as a Senior Backend Engineer to co-lead implementation efforts at the intersection of LLMs and software security."
-  canonicalURL={new URL("/careers/backend-engineer", Astro.site).toString()}>
+<Layout title="Backend Engineer">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Backend Engineer</Fragment>
       <Fragment slot="desc"
-        >Build and scale our LLM API & Application Integrations.<br />
+        >Build and scale the next generation of product security.<br />
       </Fragment>
     </Sectionhead>
 
@@ -32,7 +29,7 @@ import ApplicationFooter from "@components/careers/application-footer.astro";
         class="grid grid-cols-2 md:grid-cols-3 gap-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
         <div>
           <p class="text-sm text-gray-500 dark:text-gray-400">Location</p>
-          <p class="font-medium text-gray-800 dark:text-white">Hybrid</p>
+          <p class="font-medium text-gray-800 dark:text-white">Remote</p>
         </div>
         <div>
           <p class="text-sm text-gray-500 dark:text-gray-400">Job Type</p>
@@ -51,16 +48,15 @@ import ApplicationFooter from "@components/careers/application-footer.astro";
           Backend Engineer
         </h2>
         <p class="mt-4 text-gray-600 dark:text-gray-100">
-          We're looking for a Backend Engineer to to co-lead our implementation
-          efforts at the intersection of LLMs and software security, helping us
-          build both a powerful product and a strong engineering foundation.
-          You'll be a core member of our growing team, with the experience and
-          judgment to influence our product, culture, and technical direction.
+          We’re looking for a Back-end Engineer who’s hungry to build and grow,
+          especially into the world of AI. If you’re driven, curious, and
+          looking to make the leap from back-end development into machine
+          learning and large language models (LLMs), this is your chance.
           <br />
-          You'll have the autonomy to challenge assumptions, explore unconventional
-          approaches, and drive progress in automated security reasoning. This role
-          involves navigating ambiguity, making smart trade-offs, and knowing when
-          to optimize—and when to move fast.
+          You’ll work closely with our founding team to develop systems that extract,
+          transform, and model complex codebases into graph-based architectural representations.
+          Long term, you’ll help us push boundaries in semantic code understanding,
+          inference models, and secure-by-design AI tooling.
         </p>
       </section>
 
@@ -71,41 +67,21 @@ import ApplicationFooter from "@components/careers/application-footer.astro";
         <ul
           class="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-100">
           <li>
-            <strong>Architecture & systems design</strong>: Grow and maintain
-            the codebase and systems architecture—from development to
-            deployment, observability, and security.
+            <strong>Develope AI Applications</strong>: Build and maintain APIs
+            that power the product UI and connect internal services.
           </li>
           <li>
-            <strong>Task understanding with LLMs</strong>: Build systems that
-            extract requirements and implementation intent from task
-            descriptions and design docs (e.g., Jira, Confluence, Google Docs).
+            <strong>Integrate with modern platforms</strong>: Develop secure
+            integrations with tools like Atlassian, Google Workspace, and
+            GitHub.
           </li>
           <li>
-            <strong>Code understanding with LLMs</strong>: Use LLMs to analyze
-            codebases and detect deviations from secure patterns and best
-            practices.
+            <strong>Build inference pipelines</strong>: Use LLMs to analyze
+            codebases and help developers write more secure code..
           </li>
           <li>
-            <strong>API development</strong>: Build and maintain APIs that power
-            the product UI and connect internal services.
-          </li>
-          <li>
-            <strong>3rd-party integrations</strong>: Develop secure integrations
-            with tools like Atlassian, Google Workspace, and GitHub, including
-            enterprise-ready auth flows.
-          </li>
-          <li>
-            <strong>Data infrastructure</strong>: Design, manage, and operate
-            data stores to support product features and performance.
-          </li>
-          <li>
-            <strong>Performance & scalability</strong>: Ensure backend systems
-            support large-scale enterprise use with low latency and high
-            availability.
-          </li>
-          <li>
-            <strong>Modern engineering</strong>: Practice infrastructure as
-            code, CI/CD, automated testing, and agile development (Kanban).
+            <strong>Build data infrastructure</strong>: Design, manage, and
+            operate data stores to support product features and performance.
           </li>
         </ul>
       </section>
@@ -119,36 +95,33 @@ import ApplicationFooter from "@components/careers/application-footer.astro";
           <li>
             5+ years building SaaS products, ideally for enterprise customers
           </li>
+          <li>Experience with async programming in Python (e.g., asyncio)</li>
           <li>
-            3+ years developing APIs in Python using modern frameworks (FastAPI,
-            Flask, Django, Chalice, Lambda Powertools)
+            Strong experience integrating with third-party APIs and building
+            APIs (FastAPI preferred)
           </li>
           <li>
-            Experience with async programming in Python (e.g., asyncio, AnyIO,
-            or Trio)
-          </li>
-          <li>Strong experience integrating with third-party APIs</li>
-          <li>Proficient in SQL, ideally with PostgreSQL</li>
-          <li>Experience with infrastructure-as-code tools like Terraform</li>
-          <li>
-            Familiarity with AI model APIs such as OpenAI, Anthropic, or Hugging
-            Face
+            Experience working with AI model APIs such as OpenAI and Anthropic
           </li>
           <li>
-            Knowledge of performance techniques: caching, rate limiting,
-            profiling, and optimization
+            Knowledge of performance optimization techniques: caching, rate
+            limiting, profiling, and load handling
           </li>
-          <li>Comfortable with Docker and containerized development</li>
+          <li>Proficient in SQL (ideally PostgreSQL)</li>
+          <li>Proficient working with cloud environments (AWS preferred)</li>
+          <li>Experience using infrastructure-as-code tools like Terraform</li>
+          <li>Familiar with containerized development using Docker</li>
           <li>
-            Familiar with modern engineering practices: infrastructure as code,
-            CI/CD, testing, and Kanban workflows
+            Solid understanding of modern engineering practices: CI/CD
+            pipelines, testing strategies, Kanban workflows, and infrastructure
+            as code
           </li>
         </ul>
       </section>
 
       <section class="mt-12">
         <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">
-          Preferred Qualifications
+          Bonus Qualifications
         </h2>
         <ul
           class="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-100">
