@@ -9,9 +9,28 @@ export interface Props {
   title: string;
   description: string;
   canonicalURL: string;
+  // Optional blog-specific meta tags
+  articleAuthor?: string;
+  articlePublishedTime?: string;
+  articleSection?: string;
+  articleTags?: string[];
+  ogImage?: string;
+  ogImageAlt?: string;
+  twitterImage?: string;
 }
 
-const { title, description, canonicalURL } = Astro.props;
+const { 
+  title, 
+  description, 
+  canonicalURL,
+  articleAuthor,
+  articlePublishedTime,
+  articleSection,
+  articleTags,
+  ogImage,
+  ogImageAlt,
+  twitterImage
+} = Astro.props;
 
 const resolvedImageWithDomain = new URL(
   "/opengraph.jpg",
@@ -46,25 +65,39 @@ const makeTitle = title
 
     <SEO
       title={makeTitle}
-      description="DevArmor is the first platform for security reviews, threat modeling, and requirements enforcement."
+      description={description}
       canonical={canonicalURL}
       twitter={{
         creator: "@kavousian",
         site: "@web3templates",
         card: "summary_large_image",
+        title: articleAuthor ? title : undefined,
+        description: articleAuthor ? description : undefined,
+        image: twitterImage || (articleAuthor ? ogImage : undefined),
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
-          title: `DevArmor - Automated security reviews, threat modeling, and requirements enforcement.`,
-          image: resolvedImageWithDomain,
+          type: articleAuthor ? "article" : "website",
+          title: articleAuthor ? title : `DevArmor - Automated security reviews, threat modeling, and requirements enforcement.`,
+          image: articleAuthor ? (ogImage || resolvedImageWithDomain) : resolvedImageWithDomain,
         },
         image: {
-          alt: "DevArmor Completes Threat Modeling in Minutes, Not Months.",
+          alt: articleAuthor ? (ogImageAlt || description) : "DevArmor Completes Threat Modeling in Minutes, Not Months.",
         },
+        article: articleAuthor ? {
+          author: articleAuthor,
+          publishedTime: articlePublishedTime,
+          section: articleSection,
+          tags: articleTags,
+        } : undefined,
       }}
     />
+
+    <!-- Additional article meta tags -->
+    {articleAuthor && (
+      <meta property="article:author" content={articleAuthor} />
+    )}
 
     <script>
       (function () {
